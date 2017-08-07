@@ -62,6 +62,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Fix-one-problem-create-another" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/08/07/Fix-one-problem-create-another/" class="article-date">
+  <time datetime="2017-08-07T21:33:10.000Z" itemprop="datePublished">2017-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2017/08/07/Fix-one-problem-create-another/">Fix one problem, create another</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I fixed the issue from last night where some materials never reached a high enough priority to be mined.  As I had planned, I broke <code>miningAlgorithm</code> into two pieces: one that calculates priority and chooses what material to mine, and another, <code>chooseMine</code>, which chooses the best mine where you can find that material.</p>
+<p>Unfortunately, that caused another problem, but I’ll have to get back to that.  The good thing is that I learned more about using function expressions.</p>
+<p>I made a function expression <code>let priority = function () {/* yadda yadda */}</code>.  That checked to see if we’re running out of available mines (<code>if (i &gt;= availableMines - minableNeeds)</code>) and we loop through each of the minable needs to make sure there’s at least one mine for each need.  If not, the we return the need we’re looking at.  If there’s at least one mine, we return the top priority as per <code>miningAlgorithm</code>.  If we’re not in the last few available mines, we also return the top priority per the algorithm.</p>
+<p>Once I have returned <code>priority</code> I can call <code>chooseMine(priority(), i)</code>.  I was not expecting to have to use the parentheses in the parameters, but now that I’m thinking of it, that makes sense.  It means when it finds that it needs <code>priority</code>, it has to call it as a function.  Otherwise, it passes in the text of the function, which helps no one.</p>
+<p>And that works great.  Except when there are no mines left that contain the designated priority.</p>
+<p>Previously, I had been looping through <code>needsList</code>, which was recently sorted by priority.  If I ran out of mines for one material, it would automatically move on to the next highest priority.</p>
+<p>But now that I’m determining the top priority, I though there would be no need to loop through <code>needsList</code> yet again.  I got rid of the loop, and I was happy for slightly cleaner code.  Alas.</p>
+<p>Instead, of returning <code>priority</code>, I’m going to have to move the position of the desired material in <code>needsList</code>.  Then I can loop through it, just as I had been before.</p>
+<p>To do this, I think I can <code>unshift()</code> to make room at index 0, copy the desired material, and <code>splice()</code> the old one out.  Luckily, I want the priority at the beginning of the array, so I don’t have to go and <a href="https://stackoverflow.com/a/2440723/7691610" target="_blank" rel="external">do something like this</a>.</p>
+<p>That also means I probably won’t need a function expression.  Oh well.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/07/Fix-one-problem-create-another/" data-id="cj62ok8zl000030x5ydrepa94" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DTC/">DTC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/function-expressions/">function expressions</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Is-everything-being-mined" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2017/08/07/Is-everything-being-mined/" class="article-date">
@@ -97,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bdmayhem.github.io/blog/2017/08/07/Is-everything-being-mined/" data-id="cj61okr1l0001u0x5bvp5zzni" class="article-share-link">Share</a>
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/07/Is-everything-being-mined/" data-id="cj62ok8zl000130x58ix673bn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DTC/">DTC</a></li></ul>
@@ -141,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bdmayhem.github.io/blog/2017/08/06/Guess-who-came-to-visit/" data-id="cj61okr160000u0x5u234edmx" class="article-share-link">Share</a>
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/06/Guess-who-came-to-visit/" data-id="cj62ok901000230x5zy9g6whl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bdmayhem.github.io/blog/2017/08/06/Okay-so-what-am-I-doing-here/" data-id="cj61okr1l0002u0x57p8w1ujj" class="article-share-link">Share</a>
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/06/Okay-so-what-am-I-doing-here/" data-id="cj62ok901000530x5x9ozliyq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bdmayhem.github.io/blog/2017/08/05/hello-world/" data-id="cj61okr1l0004u0x5mrzjpul1" class="article-share-link">Share</a>
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/05/hello-world/" data-id="cj62ok901000430x5e1wdvly5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,6 +294,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2017/08/07/Fix-one-problem-create-another/">Fix one problem, create another</a>
+          </li>
         
           <li>
             <a href="/blog/2017/08/07/Is-everything-being-mined/">Is everything being mined?</a>
@@ -272,7 +324,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/DTC/">DTC</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/DTC/">DTC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/function-expressions/">function expressions</a></li></ul>
     </div>
   </div>
 
