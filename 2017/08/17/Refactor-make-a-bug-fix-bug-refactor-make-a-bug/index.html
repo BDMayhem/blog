@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Well that was cool | Blog</title>
+  <title>Refactor, make a bug, fix bug, refactor, make a bug... | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="There’s nothing like a bit of praise first thing in the morning.  I woke up to this from the Rockbite Games representative who hangs out on the Deep Town subreddit.  I’ve shown this to our team, and t">
-<meta name="keywords" content="DTC">
+  <meta name="description" content="Today I’ve been working on allowing users to add the number of smelting, crafting, etc. stations they have in operation.  That will affect the time required to make the materials in question. I added">
+<meta name="keywords" content="DTC,debugging">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Well that was cool">
-<meta property="og:url" content="http://bdmayhem.github.io/blog/2017/08/09/Well-that-was-cool/index.html">
+<meta property="og:title" content="Refactor, make a bug, fix bug, refactor, make a bug...">
+<meta property="og:url" content="http://bdmayhem.github.io/blog/2017/08/17/Refactor-make-a-bug-fix-bug-refactor-make-a-bug/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="There’s nothing like a bit of praise first thing in the morning.  I woke up to this from the Rockbite Games representative who hangs out on the Deep Town subreddit.  I’ve shown this to our team, and t">
+<meta property="og:description" content="Today I’ve been working on allowing users to add the number of smelting, crafting, etc. stations they have in operation.  That will affect the time required to make the materials in question. I added">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-08-10T03:53:46.433Z">
+<meta property="og:updated_time" content="2017-08-17T05:36:27.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Well that was cool">
-<meta name="twitter:description" content="There’s nothing like a bit of praise first thing in the morning.  I woke up to this from the Rockbite Games representative who hangs out on the Deep Town subreddit.  I’ve shown this to our team, and t">
+<meta name="twitter:title" content="Refactor, make a bug, fix bug, refactor, make a bug...">
+<meta name="twitter:description" content="Today I’ve been working on allowing users to add the number of smelting, crafting, etc. stations they have in operation.  That will affect the time required to make the materials in question. I added">
   
   
     <link rel="icon" href="/favicon.png">
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Well-that-was-cool" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Refactor-make-a-bug-fix-bug-refactor-make-a-bug" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2017/08/09/Well-that-was-cool/" class="article-date">
-  <time datetime="2017-08-10T03:18:41.000Z" itemprop="datePublished">2017-08-09</time>
+    <a href="/blog/2017/08/17/Refactor-make-a-bug-fix-bug-refactor-make-a-bug/" class="article-date">
+  <time datetime="2017-08-17T05:17:37.000Z" itemprop="datePublished">2017-08-17</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Well that was cool
+      Refactor, make a bug, fix bug, refactor, make a bug...
     </h1>
   
 
@@ -87,20 +87,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>There’s nothing like a bit of praise first thing in the morning.  I woke up to this from the Rockbite Games representative who hangs out on the Deep Town subreddit.</p>
-<blockquote>
-<p>I’ve shown this to our team, and they love it! Keep it up, the bots are proud of you! No, really this is very impressive. We’ll try to check the GitHub repo on the weekend if there is some time.</p>
-</blockquote>
-<p>That’s all, but that’s all it takes.  A hint of recognition for my work, and from someone whose opinion is more than slightly informed.</p>
-<p>Maybe I should get to commenting on my code…</p>
+        <p>Today I’ve been working on allowing users to add the number of smelting, crafting, etc. stations they have in operation.  That will affect the time required to make the materials in question.</p>
+<p>I added a simple number and +/- buttons that would count up or down when clicked.  But in order to do that, it screwed with how the needs and inventory lists are created.  So I reworked it.  Rather than just creating the items it needs, now it creates and hides every item upon load and only unhides the ones needed.  Much easier said than done.  And much easier done in jQuery than vanilla JS.  But a challenge is a challenge, and I’m not using jQuery this time.</p>
+<p>Much later I got everything working as it used to (but now with shiny +/- buttons!) and I found another bug.  At least this was an old one, not one I created in this refactor process.</p>
+<p>I found that if you have inventory for a material needed more than once, the inventory is counted twice.  Tracking that one down was entertaining, and squashing it was downright fun.</p>
+<p>This morning I was able to implement to coal slider, another rewarding accomplishment, especially because I got to work on my new flexbox skills.  </p>
+<p>Oh, and because I didn’t want to bother digging out my Photoshop disks, I installed Gimp to work on the background image.  What a clunky, user-hostile thing to inflict on people.  I’d almost call it overpriced.  For similar reasons I downloaded OpenOffice with similar sentiments.  Sigh.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bdmayhem.github.io/blog/2017/08/09/Well-that-was-cool/" data-id="cj6g0jr62000cq0x5wezdbmsy" class="article-share-link">Share</a>
+      <a data-url="http://bdmayhem.github.io/blog/2017/08/17/Refactor-make-a-bug-fix-bug-refactor-make-a-bug/" data-id="cj6g0jr620009q0x53ex8ear7" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DTC/">DTC</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DTC/">DTC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/debugging/">debugging</a></li></ul>
 
     </footer>
   </div>
@@ -108,19 +108,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2017/08/14/Every-new-tool-is-like-an-egg/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Every new tool is like an egg
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2017/08/09/Quick-JSHint-ESLint-VSCode-Sublime-note/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2017/08/14/Every-new-tool-is-like-an-egg/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Quick JSHint/ESLint VSCode/Sublime note</div>
+      <div class="article-nav-title">Every new tool is like an egg</div>
     </a>
   
 </nav>
