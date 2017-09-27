@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: git | Blog</title>
+  <title>Hoping to see the forest for the trees | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://bdmayhem.github.io/blog/tags/git/index.html">
+  <meta name="description" content="There has to be a good reason for React, right?  So far, it seems like a lot of passing information from one place to another without any apparent reason and a lot more typing.  If you want to make so">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hoping to see the forest for the trees">
+<meta property="og:url" content="http://bdmayhem.github.io/blog/2017/09/27/Hoping-to-see-the-forest-for-the-trees/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="There has to be a good reason for React, right?  So far, it seems like a lot of passing information from one place to another without any apparent reason and a lot more typing.  If you want to make so">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-27T16:37:27.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="Hoping to see the forest for the trees">
+<meta name="twitter:description" content="There has to be a good reason for React, right?  So far, it seems like a lot of passing information from one place to another without any apparent reason and a lot more typing.  If you want to make so">
   
   
     <link rel="icon" href="/favicon.png">
@@ -60,39 +65,68 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/22/Node-Express-Mongo-and-more/" class="archive-article-date">
-  <time datetime="2017-09-22T04:24:33.000Z" itemprop="datePublished">Sep 22</time>
+        <section id="main"><article id="post-Hoping-to-see-the-forest-for-the-trees" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/09/27/Hoping-to-see-the-forest-for-the-trees/" class="article-date">
+  <time datetime="2017-09-27T16:18:25.000Z" itemprop="datePublished">2017-09-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/22/Node-Express-Mongo-and-more/">Node, Express, Mongo, and more</a>
+    <h1 class="article-title" itemprop="name">
+      Hoping to see the forest for the trees
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>There has to be a good reason for React, right?  So far, it seems like a lot of passing information from one place to another without any apparent reason and a lot more typing.  If you want to make something, you can’t just make it.  You have to make what it might be, then set up the ability to make it, then make it.</p>
+<p>Let’s make a button:</p>
+<pre><code>&lt;button type=&apos;button&apos; class=&apos;pretty-button&apos; onclick=&apos;someFunction()&apos;&gt;
+    Click Me!
+&lt;/button&gt;
+</code></pre><p>But in React, you need it to be a functional stateless component, so it’s more like:</p>
+<pre><code>const Button = ({ className, onclick, children }) =&gt;
+    &lt;button type=&apos;button&apos; onclick={onclick} className={className}&gt;
+        {children}
+    &lt;/button&gt;
+</code></pre><p>But that’s not enough, because that component is inside a parent, where it gets its properties:</p>
+<pre><code>&lt;Button className=&apos;pretty-button&apos; onclick={someFunction&gt;
+    Click Me!
+&lt;/Button&gt;
+</code></pre><p>So at least in this case, you’ve more than doubled how much you need to write (which they say doubles your chances for a typo or other error).  I’m sure there’s a good reason for doing things this way, but I sure haven’t seen evidence of it yet.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://bdmayhem.github.io/blog/2017/09/27/Hoping-to-see-the-forest-for-the-trees/" data-id="cj838o92v0003kgx5sxjbuzvo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/react/">react</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/09/26/Starting-React/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Starting React</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
