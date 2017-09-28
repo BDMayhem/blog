@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: node | Blog</title>
+  <title>Understanding spread | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://bdmayhem.github.io/blog/tags/node/index.html">
+  <meta name="description" content="One of my biggest sets of frustrations comes from not being able to understand a concept, method, tool, etc., until I’ve used it a bit.  And once it clicks, I can’t understand how I went so long think">
+<meta name="keywords" content="react,array spread operator,Object.assign">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding spread">
+<meta property="og:url" content="http://bdmayhem.github.io/blog/2017/09/27/Understanding-spread/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="One of my biggest sets of frustrations comes from not being able to understand a concept, method, tool, etc., until I’ve used it a bit.  And once it clicks, I can’t understand how I went so long think">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-09-28T03:03:48.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="Understanding spread">
+<meta name="twitter:description" content="One of my biggest sets of frustrations comes from not being able to understand a concept, method, tool, etc., until I’ve used it a bit.  And once it clicks, I can’t understand how I went so long think">
   
   
     <link rel="icon" href="/favicon.png">
@@ -60,39 +65,57 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2017/09/22/Node-Express-Mongo-and-more/" class="archive-article-date">
-  <time datetime="2017-09-22T04:24:33.000Z" itemprop="datePublished">Sep 22</time>
+        <section id="main"><article id="post-Understanding-spread" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/09/27/Understanding-spread/" class="article-date">
+  <time datetime="2017-09-28T02:37:50.000Z" itemprop="datePublished">2017-09-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2017/09/22/Node-Express-Mongo-and-more/">Node, Express, Mongo, and more</a>
+    <h1 class="article-title" itemprop="name">
+      Understanding spread
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>One of my biggest sets of frustrations comes from not being able to understand a concept, method, tool, etc., until I’ve used it a bit.  And once it clicks, I can’t understand how I went so long thinking it was complicated to grasp.</p>
+<p>Right now, I can’t understand why it took me so long to grasp the array spread operator.  I must have read the MDN page half a dozen times, barely retaining enough to remember what it was called.  How many times did I Google “three dots js” and close the page, eyes glazed over?</p>
+<p>It’s nice, especially since I was just recently introduced to the concept of passing by reference and how that can screw up your immutable data structures.  That was a DTC issue, where I just tried to push one object into an array, then use the array again only to find that the data had been changed.  That’s how I came across Object.assign, which passes only the values of an object, not a reference to the original.</p>
+<p>And that was how the spread operator was explained in <a href="https://github.com/rwieruch/the-road-to-learn-react/blob/master/manuscript/chapter3.md" target="_blank" rel="external">The Road to Learn React</a>.  It’s like Object.assign, just for arrays (as well as objects in React via <a href="https://babeljs.io/docs/plugins/transform-object-rest-spread/" target="_blank" rel="external">babel-plugin-transform-object-rest-spread</a>).  And suddenly, I get it.  Okay.  What’s next?</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://bdmayhem.github.io/blog/2017/09/27/Understanding-spread/" data-id="cj83vl6zv000dmgx59auh4htj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Object-assign/">Object.assign</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/array-spread-operator/">array spread operator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/react/">react</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2017/09/27/Hoping-to-see-the-forest-for-the-trees/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hoping to see the forest for the trees</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
