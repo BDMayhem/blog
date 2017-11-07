@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="I was working on understanding how to make React relevant beyond a single page app, and I came across this tutorial by Krithika Muthukumar. When I got to the end, and I knew what I expected each piece">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-11-07T01:31:10.994Z">
+<meta property="og:updated_time" content="2017-11-07T02:07:48.881Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Migrating React Router from 3 to 4">
 <meta name="twitter:description" content="I was working on understanding how to make React relevant beyond a single page app, and I came across this tutorial by Krithika Muthukumar. When I got to the end, and I knew what I expected each piece">
@@ -93,7 +93,7 @@
 <p>When I got to the end, and I knew what I expected each piece to be doing, nothing happened.  None of the components worked at all.  I dug in deeper, and saw that some of the required packages were outdated, and after some elimination processes, I found the problem: it used React-Router 3, and the latest version, 4, has changed significantly.</p>
 <p>As a challenge to myself, someone who is pretty new to React and with no previous experience with React-Router, I attempted to migrate the tiny, crazy simple app to React-Router 4.  And after some brow furrowing and chin scratching, I made it work.  This may not be the best way to do things, and there are some things I thought would work but don’t (and I still don’t know why).  But it works, and I’m happy about that.</p>
 <p>I also made this crazy simple app a tiny bit more complicated by adding a header with links to each of the two pages.</p>
-<p>Here’s what I did.</p>
+<p>Here’s what I did. (<a href="https://github.com/BDMayhem/react-about-me" target="_blank" rel="external">Click here for the Github repo</a>)</p>
 <h2 id="Install-React-Router-4"><a href="#Install-React-Router-4" class="headerlink" title="Install React Router 4"></a>Install React Router 4</h2><pre><code>npm install --save react-router react-router-dom
 </code></pre><h2 id="src-index-jsx"><a href="#src-index-jsx" class="headerlink" title="src/index.jsx"></a>src/index.jsx</h2><p>In the index, we’ll have <code>React.DOM</code> render the <code>App</code> component, instead of a <code>Router</code> component.  That means we don’t need to import anything from <code>react-router</code> or <code>./routes</code>, and we remove the <code>Router</code> component.</p>
 <pre><code>import React from &apos;react&apos;;
